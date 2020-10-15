@@ -960,6 +960,13 @@ using UnityEngine.Experimental.Networking;
                             SaveProfileAndSessionIds(responseData, data);
                         }
                     }
+                    else 
+                    {
+                        if(response != null)
+                        {
+                            data = JsonWriter.Serialize(response);
+                        }
+                    }
 
                     // now try to execute the callback
                     if (sc != null)
